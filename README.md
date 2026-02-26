@@ -23,7 +23,7 @@ digite o link que gere o qrcode
 GET /api/qrcode/generate?url=https://exemplo.com
 ```
 Retorna a imagem PNG do QR Code gerado.
-
+ARQUIVO DO FRONT JUNTO COM DO BACKEND PARA FACILIDADE DE ACESSO
 
 ## 👤 Autor
 
