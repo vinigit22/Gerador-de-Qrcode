@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>QR <span>Code</span></h1>
+    <p class="subtitle">// gerador via Spring Boot API</p>
+
+    <div class="card">
+      <label for="url">URL</label>
+      <input type="text" id="url" placeholder="https://exemplo.com" />
+      <button id="btn" onclick="gerar()">Gerar QR Code</button>
+      <div class="error" id="error">❌ Erro ao gerar. Verifique a URL e tente novamente.</div>
+    </div>
+
+    <div class="result" id="result">
+      <img id="qr-img" src="" alt="QR Code gerado" />
+      <br/>
+      <a class="download-btn" id="download-btn" download="qrcode.png">⬇ Baixar PNG</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

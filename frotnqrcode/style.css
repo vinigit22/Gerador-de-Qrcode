@@ -1,0 +1,147 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0d0d;
+  --card: #161616;
+  --border: #2a2a2a;
+  --accent: #c8f135;
+  --text: #f0f0f0;
+  --muted: #666;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.3rem;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  font-family: 'Space Mono', monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: var(--accent);
+  color: #0d0d0d;
+  border: none;
+  border-radius: 10px;
+  padding: 0.95rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.result {
+  margin-top: 2rem;
+  text-align: center;
+  display: none;
+}
+
+.result.visible { display: block; }
+
+.result img {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  max-width: 100%;
+  background: #fff;
+  padding: 12px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.download-btn:hover {
+  background: var(--accent);
+  color: #0d0d0d;
+}
+
+.error {
+  margin-top: 1rem;
+  background: #2a0a0a;
+  border: 1px solid #5a1a1a;
+  color: #ff6b6b;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.error.visible { display: block; }
